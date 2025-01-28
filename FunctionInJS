@@ -1,0 +1,44 @@
+const mul=function(x,y){
+    return x*y;
+}
+const x=9,y=3;
+console.log("Mul is : "+mul(x,y));
+
+console.log("---------------------------------------------------------------------------------------------------------------");
+
+// Nested function
+function student(college){
+    function university(){
+        console.log("College is :"+college);
+    }
+    return university();
+};
+student("LPU");
+
+console.log("---------------------------------------------------------------------------------------------------------------");
+
+// arrow fxn
+ const big=(a,b)=>{
+    if(a>b)
+        console.log(a+" is greater than "+b);
+    else
+    console.log(b+" is greater than "+a);
+ }
+ big(5,6);
+
+ console.log("---------------------------------------------------------------------------------------------------------------");
+
+ // method in js 
+
+ // creating object
+ const stu={
+    name:"QWERTY",
+    standard:12,
+    section: "A",
+
+    studentDetail:function(){
+        return "Hi My name is "+this.name+" and I am in "+this.standard+" class and my section is "+this.section;
+    }
+ };
+
+ console.log(stu.studentDetail()); // calling method studentDetail()

@@ -1,0 +1,37 @@
+// object is in key:value pair
+// It stores data as key-value pairs, where each key is a unique identifier for the associated value.
+//  Objects are dynamic, which means the properties can be added, modified, or deleted at runtime.
+let student={
+    "name":"Nischay",
+    "college":"LPU"
+}
+console.log("Type of Student object is :"+typeof student);
+console.log("Student object is :"+student);
+
+// accessing element of object
+console.log("Student object is :"+student.name);
+console.log("Student object is :"+student.college);
+
+// modifying object 
+student.name="Ashok";
+student.rollNo=78;
+console.log("Student object is :"+student.name);
+console.log("Student roll number is :"+student.rollNo);
+
+//iterating through for...in loop
+// key will return key and student[key] will return value 
+for(let key in student){
+    console.log(key + ": " + student[key]);
+}
+
+// Length of Object
+ const studentLength=Object.keys(student).length;
+ console.log("Length of student object is : "+studentLength);
+
+ // delete key 
+ delete student.rollNo;
+ console.log("Length of student object after deleting is : "+Object.keys(student).length);
+ for(let i in student){
+    console.log(i +":"+student[i]);
+ }
+
